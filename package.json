@@ -1,0 +1,27 @@
+{
+  "name": "discordjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "github:discordjs/voice",
+    "discord.js": "^14.18.0",
+    "ffmpeg-static": "^5.2.0",
+    "libsodium-wrappers": "^0.7.15",
+    "opusscript": "^0.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tagrenam/AutoJoinRadio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tagrenam/AutoJoinRadio/issues"
+  },
+  "homepage": "https://github.com/Tagrenam/AutoJoinRadio#readme",
+  "description": ""
+}
