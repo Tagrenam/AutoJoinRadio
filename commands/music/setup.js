@@ -14,12 +14,14 @@ module.exports = {
 					.setDescription('Specify or be in a voice channel or it will follow you')
 					.addChannelTypes(ChannelType.GuildVoice)),
 	async execute(interaction) {
-		// try {
+		try {
 			var channel = interaction.options.getChannel('channel') ?? interaction.member.voice.channel ?? {"id": 0};
 			var url = interaction.options.getString('url');
 			var volume = interaction.options.getString('volume') ?? "40";
-	
-			if (channel.id === interaction.member.voice.channel.id) {
+
+			console.debug(`${channel}`);
+
+			if (interaction.member.voice.channel && channel.id === interaction.member.voice.channel.id) {
 				joinandplay(channel, url, volume);
 			}
 	
@@ -30,8 +32,8 @@ module.exports = {
 				.setDescription(`I have created configuration for auto join`);
 	
 			await interaction.reply({embeds: [exampleEmbed], flags: MessageFlags.Ephemeral});
-		// } catch (err) {
-		// 	await badreply(interaction, "setup.js", err);
-		// }
+		} catch (err) {
+			await badreply(interaction, "setup.js", err);
+		}
 	},
 };

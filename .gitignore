@@ -1,2 +1,4 @@
 config.json
 user-configs/**
+/node-modules/*
+package-lock.json
